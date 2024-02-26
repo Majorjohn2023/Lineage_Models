@@ -6,4 +6,4 @@ WITH order_priority_stats AS (
     FROM {{ ref('stg_orders') }}
     GROUP BY o_orderpriority
 )
-SELECT * FROM order_priority_stats;
+SELECT * FROM order_priority_stats

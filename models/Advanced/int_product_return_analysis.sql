@@ -14,4 +14,4 @@ product_return_rate AS (
         (return_count::FLOAT / total_count) AS return_rate
     FROM product_returns
 )
-SELECT * FROM product_return_rate;
+SELECT * FROM product_return_rate

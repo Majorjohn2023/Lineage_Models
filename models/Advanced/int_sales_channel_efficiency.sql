@@ -15,4 +15,4 @@ channel_efficiency AS (
         total_sales / NULLIF(total_orders, 0) AS average_sale_per_order
     FROM sales_channel
 )
-SELECT * FROM channel_efficiency;
+SELECT * FROM channel_efficiency

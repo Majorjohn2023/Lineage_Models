@@ -6,4 +6,4 @@ WITH supply_cost_analysis AS (
     FROM {{ ref('stg_partsupp') }}
     GROUP BY ps_suppkey
 )
-SELECT * FROM supply_cost_analysis;
+SELECT * FROM supply_cost_analysis
