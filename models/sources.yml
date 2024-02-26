@@ -2,8 +2,8 @@ version: 2
 
 sources:
   - name: tpch
-    database: your_database_name
-    schema: your_schema_name  # This might be 'public' or another schema where your TPC-H tables are located.
+    database: snowflake_sample_data
+    schema: tpch_sf1  # This might be 'public' or another schema where your TPC-H tables are located.
     tables:
       - name: customer
       - name: orders
