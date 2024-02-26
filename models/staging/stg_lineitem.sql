@@ -19,4 +19,4 @@ SELECT
     l_shipinstruct,
     l_shipmode,
     l_comment
-FROM source;
+FROM source

@@ -12,4 +12,4 @@ SELECT
     p_container,
     p_retailprice,
     p_comment
-FROM source;
+FROM source

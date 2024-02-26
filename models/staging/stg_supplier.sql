@@ -10,4 +10,4 @@ SELECT
     s_phone,
     s_acctbal,
     s_comment
-FROM source;
+FROM source

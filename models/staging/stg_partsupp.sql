@@ -8,4 +8,4 @@ SELECT
     ps_availqty,
     ps_supplycost,
     ps_comment
-FROM source;
+FROM source

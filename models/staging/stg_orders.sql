@@ -12,4 +12,4 @@ SELECT
     o_clerk,
     o_shippriority,
     o_comment
-FROM source;
+FROM source

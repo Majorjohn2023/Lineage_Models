@@ -7,4 +7,4 @@ SELECT
     n_name,
     n_regionkey,
     n_comment
-FROM source;
+FROM source
