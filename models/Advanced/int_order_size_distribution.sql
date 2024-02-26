@@ -1,15 +1,12 @@
-WITH order_size AS (
+WITH order_sizes AS (
     SELECT
-        o_orderkey,
+        l_orderkey,
         COUNT(*) AS lineitem_count
     FROM {{ ref('stg_lineitem') }}
-    GROUP BY o_orderkey
-),
-order_size_distribution AS (
-    SELECT
-        lineitem_count,
-        COUNT(*) AS order_count
-    FROM order_size
-    GROUP BY lineitem_count
+    GROUP BY l_orderkey
 )
-SELECT * FROM order_size_distribution
+SELECT
+    lineitem_count,
+    COUNT(*) AS number_of_orders
+FROM order_sizes
+GROUP BY lineitem_count
