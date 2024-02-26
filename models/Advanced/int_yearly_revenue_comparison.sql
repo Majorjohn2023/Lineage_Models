@@ -1,9 +1,12 @@
-WITH time_to_ship AS (
+WITH yearly_revenue AS (
     SELECT
-        o_orderkey,
-        DATEDIFF(day, o_orderdate, MIN(l_shipdate)) AS days_to_ship
-    FROM {{ ref('stg_orders') }} o
-    JOIN {{ ref('stg_lineitem') }} l ON o.o_orderkey = l.l_orderkey
-    GROUP BY o_orderkey
+        DATE_PART('year', o_orderdate) AS order_year,
+        SUM(o_totalprice) AS total_revenue
+    FROM {{ ref('stg_orders') }}
+    GROUP BY DATE_PART('year', o_orderdate)
 )
-SELECT * FROM time_to_ship
+SELECT 
+    order_year,
+    total_revenue
+FROM yearly_revenue
+ORDER BY order_year

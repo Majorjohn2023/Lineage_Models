@@ -11,4 +11,4 @@ SELECT
     total_orders,
     total_quantity
 FROM monthly_demand
-ORDER BY total_quantity DESC;
+ORDER BY total_quantity DESC
